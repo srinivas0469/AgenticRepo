@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workflow Visualization</title>
+  <script src="/static/js/cytoscape.min.js"></script>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <h2>Workflow Visualization</h2>
+  <div id="cy" style="width: 100%; height: 600px;"></div>
+
+  <script>
+    fetch("/api/visualize")
+      .then(res => res.text())
+      .then(dotData => {
+        // You could convert DOT to Cytoscape JSON here
+        console.log("DOT Graph:", dotData);
+        // (optional: use a parser or switch to JSON directly)
+      });
+  </script>
+</body>
+</html>

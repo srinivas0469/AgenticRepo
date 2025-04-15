@@ -1,0 +1,13 @@
+agents:
+  - id: "agent1"
+    name: "GreetingAgent"
+    type: "llm"
+    config:
+      model: "gpt-4"
+      prompt: "Greet the user and ask how you can help."
+
+  - id: "agent2"
+    name: "DecisionAgent"
+    type: "router"
+    config:
+      logic: "route based on user intent"

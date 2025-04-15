@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YAML Editor</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        textarea { width: 100%; height: 500px; margin-top: 10px; }
+        button { margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<h1>YAML Editor</h1>
+
+<textarea id="yamlContent" placeholder="Edit YAML here..."></textarea><br>
+<button onclick="saveYaml()">Save</button>
+
+<script>
+    function saveYaml() {
+        var yamlContent = document.getElementById('yamlContent').value;
+        alert('YAML Saved:\n' + yamlContent);
+        // You can POST this to backend using fetch or AJAX
+    }
+</script>
+
+</body>
+</html>
